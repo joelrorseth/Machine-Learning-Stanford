@@ -18,14 +18,10 @@ for iter = 1:num_iters
     %
 
 
+    predictions = X*theta;
+    simulUpdates = X' * (predictions - y);
 
-
-
-
-
-
-
-
+    theta = theta - alpha * (1/m) * simulUpdates;
 
     % ============================================================
 

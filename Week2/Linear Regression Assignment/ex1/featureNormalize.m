@@ -27,12 +27,18 @@ sigma = zeros(1, size(X, 2));
 %       
 
 
+number_features = size(X,2);
 
+for x=1:number_features,
+    mu(x) = mean(X(:,x));   % Calculate mean aka mu symbol
+    sigma(x) = std(X(:,x));    % Calculate std dev aka sigma
 
+    % Modify the copied dataset with new values
+    X_norm(:,x) = (X_norm(:,x)-mu(x))/sigma(x);
 
-
-
-
+    disp(mu(x));
+    disp(sigma(x));
+end;
 
 % ============================================================
 
