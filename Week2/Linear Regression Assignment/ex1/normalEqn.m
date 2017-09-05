@@ -12,7 +12,10 @@ theta = zeros(size(X, 2), 1);
 
 % ---------------------- Sample Solution ----------------------
 
+% Code representation of the normal equation
+% This method directly finds solution, doesn't require feature scaling
 
+theta = pinv(X' * X) * X' * y;
 
 
 % -------------------------------------------------------------
